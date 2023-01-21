@@ -1,9 +1,9 @@
-import styles from "../styles/card-list-module.css";
+import styles from "../styles/card-list.module.css";
 import Card from "../components/card";
 
 export const CardList = (props) => {
     return (<div className={styles.sectionWrapper}>
-        <h2 className={styles.heading2}>Stores near me</h2>
+        <h2 className={styles.heading2}>{props.nameSection}</h2>
         <div className={styles.cardLayout}>
             {props.coffeeStores.map(coffeeStore => {
                 return <Card
